@@ -5,7 +5,8 @@
 # -----------------------------
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y python3-pip python3-dev git awscli unzip
+apt-get install -y python3-pip python3-dev git unzip
+pip install awscli --upgrade --user
 
 # -----------------------------
 # Install Python packages
