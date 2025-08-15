@@ -26,9 +26,4 @@ aws configure set default.region us-east-2
 PRIVATE_IP=$(hostname -I | awk '{print $1}')
 ray start --head --node-ip-address=${PRIVATE_IP} --port=6379 --dashboard-host=0.0.0.0
 
-# -----------------------------
-# Optional: clone your benchmark repo
-# -----------------------------
-git clone https://github.com/nsawicki/DaskBechmark1.git /home/ubuntu/
-
 echo "✅ Ray head node started at ${PRIVATE_IP}:6379"
