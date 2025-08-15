@@ -5,8 +5,20 @@
 # -----------------------------
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y python3-pip python3-dev git unzip
-pip install awscli --upgrade --user
+apt-get install -y python3-pip python3-dev python3-venv git unzip
+
+# -----------------------------
+# Python venv won't conflict with apt
+# -----------------------------
+python3 -m venv daskbenchmarkenv
+source daskbenchmarkenv/bin/activate
+
+# -----------------------------
+# Install AWS CLI
+# -----------------------------
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
 
 # -----------------------------
 # Install Python packages
