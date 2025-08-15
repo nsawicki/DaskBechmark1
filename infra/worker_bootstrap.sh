@@ -5,7 +5,9 @@
 # -----------------------------
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y python3-pip python3-dev python3-venv git unzip
+apt-get install -y git unzip
+sudo apt install python3-dev
+sudo apt install python3-venv
 
 # -----------------------------
 # Python venv won't conflict with apt
