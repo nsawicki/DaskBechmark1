@@ -11,7 +11,7 @@ pip install awscli --upgrade --user
 # -----------------------------
 # Install Python packages
 # -----------------------------
-python3 -m pip install --upgrade pip
+sudo apt install --upgrade python3-pip
 pip3 install ray[default] daft pillow boto3
 
 # -----------------------------
