@@ -14,7 +14,7 @@ head_bootstrap.sh
 
 Worker nodes:
 ```python
-worker_bootstrap.sh (replace HEAD_NODE_PRIVATE_IP with the actual private IP of the head node)
+worker_bootstrap.sh #(replace HEAD_NODE_PRIVATE_IP with the actual private IP of the head node)
 ```
 
 Both scripts will:
