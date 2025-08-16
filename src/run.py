@@ -17,25 +17,17 @@ def mean_pixel_from_s3(path):
     except Exception as e:
         print(f"Failed {path}: {e}")
         return None
-# Open S3 file as file-like object
-#with fs.open(test_im, "rb") as f:
-#    print('Reading ' + str(test_im))
-#    img = Image.open(f)
-#    arr = np.array(img)
-#    print(arr.mean())
 
 if __name__ == '__main__':
 
-    # Connect to your cluster
-    client = Client("tcp://172.31.3.84:8786")
+    # ENTER HEAD NODE PRIVATE IP HERE
+    client = Client("tcp://:8786")
 
     # Establish s3 fs
     fs = s3fs.S3FileSystem()
 
-    # Example list of image paths in S3
+    # list of image paths in S3
     image_paths = [
-        "s3://nsawickidldatasets1/cityscapes/leftImg8bit/train/aachen/aachen_000000_000019_leftImg8bit.png",
-        "s3://nsawickidldatasets1/cityscapes/leftImg8bit/train/aachen/aachen_000001_000019_leftImg8bit.png"
     ]
 
     ##############################################
