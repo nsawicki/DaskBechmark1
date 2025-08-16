@@ -26,7 +26,8 @@ sudo ../../aws/install
 # Install Python packages
 # -----------------------------
 sudo apt install --upgrade python3-pip
-pip3 install ray[default] daft pillow boto3
+pip3 install ray[default] daft pillow boto3 s3fs
+pip3 install "dask[complete]"
 
 # -----------------------------
 # Configure AWS CLI
@@ -37,8 +38,8 @@ aws configure set default.region us-east-2
 # -----------------------------
 # Join Ray cluster
 # -----------------------------
-HEAD_NODE_PRIVATE_IP=  # <-- Replace with head node private IP
-PRIVATE_IP=$(hostname -I | awk '{print $1}')
-ray start --address="${HEAD_NODE_PRIVATE_IP}:6379" --node-ip-address=${PRIVATE_IP}
+#HEAD_NODE_PRIVATE_IP=  # <-- Replace with head node private IP
+#PRIVATE_IP=$(hostname -I | awk '{print $1}')
+#ray start --address="${HEAD_NODE_PRIVATE_IP}:6379" --node-ip-address=${PRIVATE_IP}
 
-echo "✅ Worker node connected to head node at ${HEAD_NODE_PRIVATE_IP}:6379"
+#echo "✅ Worker node connected to head node at ${HEAD_NODE_PRIVATE_IP}:6379"

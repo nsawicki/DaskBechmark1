@@ -26,7 +26,8 @@ sudo ../../aws/install
 # Install Python packages
 # -----------------------------
 sudo apt install --upgrade python3-pip
-pip3 install ray[default] daft pillow boto3
+pip3 install ray[default] daft pillow boto3 s3fs
+pip3 install "dask[complete]"
 
 # -----------------------------
 # Configure AWS CLI
@@ -37,7 +38,7 @@ aws configure set default.region us-east-2
 # -----------------------------
 # Start Ray head node
 # -----------------------------
-PRIVATE_IP=$(hostname -I | awk '{print $1}')
-ray start --head --node-ip-address=${PRIVATE_IP} --port=6379 --dashboard-host=0.0.0.0
+#PRIVATE_IP=$(hostname -I | awk '{print $1}')
+#ray start --head --node-ip-address=${PRIVATE_IP} --port=6379 --dashboard-host=0.0.0.0
 
-echo "✅ Ray head node started at ${PRIVATE_IP}:6379"
+#echo "✅ Ray head node started at ${PRIVATE_IP}:6379"
