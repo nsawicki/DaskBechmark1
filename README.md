@@ -1,4 +1,4 @@
-# Distributed Image Benchmark with Daft on AWS
+# Distributed Image Setup with Daft on AWS
 
 This project demonstrates a basic distributed benchmark using Daft to process images across multiple AWS EC2 instances.
 We use a simple operation — finding the mean pixel value per image — to highlight cluster setup, distributed execution, and performance benchmarking.
