@@ -9,12 +9,12 @@ When AWS launching servers, run the appropriate script into User Data:
 
 Head node: 
 ```python
-head_bootstrap.sh
+source head_bootstrap.sh
 ```
 
-Worker nodes:
+Worker nodes: (replace HEAD_NODE_PRIVATE_IP with the actual private IP of the head node)
 ```python
-worker_bootstrap.sh #(replace HEAD_NODE_PRIVATE_IP with the actual private IP of the head node)
+source worker_bootstrap.sh 
 ```
 
 Both scripts will:
