@@ -28,7 +28,7 @@ ray status
 
 You should see the worker nodes listed as connected.
 
-▶️ Run Benchmark
+# Run Benchmark
 
 On the head node, run:
 
@@ -43,7 +43,7 @@ Distribute the task of finding the mean pixel per image across the Ray cluster u
 
 Report runtime statistics (load time, processing time, speedup).
 
-⚠️ Notes
+# Notes
 
 Uploading data to S3 is free, but storing it and downloading from S3 incurs costs.
 
@@ -51,4 +51,4 @@ t3.micro instances are very RAM-constrained. For smoother runs, start with t3.sm
 
 If using S3, ensure your EC2 instances have IAM roles with S3 read permissions.
 
-✅ With this setup, you now have a minimal but real distributed benchmark running on AWS.
+With this setup, you now have a minimal but real distributed benchmark running on AWS.
