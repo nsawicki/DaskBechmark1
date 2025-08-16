@@ -9,11 +9,13 @@ When AWS launching servers, run the appropriate script into User Data:
 
 Head node: 
 ```python
-    head_bootstrap.sh
+head_bootstrap.sh
+```
 
 Worker nodes:
 ```python
-    worker_bootstrap.sh (replace HEAD_NODE_PRIVATE_IP with the actual private IP of the head node)
+worker_bootstrap.sh (replace HEAD_NODE_PRIVATE_IP with the actual private IP of the head node)
+```
 
 Both scripts will:
 - Update and install system dependencies
@@ -24,8 +26,8 @@ Both scripts will:
 
 On the head node, run:
 ```python
-    python3 run.py
-
+python3 run.py
+```
 
 This script will:
 - Load images (from local disk or S3).
